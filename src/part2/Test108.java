@@ -24,8 +24,8 @@ public class Test108 {
             }
             rankArr[i] = myrank;
         }
-        for (int x : rankArr) {
-            System.out.print(x + " ");
+        for (int x = 0; x < rankArr.length; x++) {
+            System.out.print(rankArr[x] + " ");
         }
     }
 }
