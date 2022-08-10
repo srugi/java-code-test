@@ -27,18 +27,29 @@ public class Test205 {
 
     public void solution(int targetNum) {
         int answer = 0;
-        int sum = 0;
-        int k = 0;
-        for (int i = 1; i <= (targetNum / 2); i++) {
-            sum = 0;
-            k = 0;
-            while (sum < targetNum) {
-                sum += (i + k);
-                k++;
-                // System.out.println(sum);
-            }
-            // System.out.println("===" + sum);
-            if (sum == targetNum) {
+        // 내풀이 방법
+        // int sum = 0;
+        // int k = 0;
+        // for (int i = 1; i <= (targetNum / 2); i++) {
+        //     sum = 0;
+        //     k = 0;
+        //     while (sum < targetNum) {
+        //         sum += (i + k);
+        //         k++;
+        //         // System.out.println(sum);
+        //     }
+        //     // System.out.println("===" + sum);
+        //     if (sum == targetNum) {
+        //         answer++;
+        //     }
+        // }
+        // 강사님 풀이방법
+        int cnt = 1;
+        targetNum = targetNum -1;
+        while(targetNum > 0) {
+            cnt++;
+            targetNum = targetNum - cnt;
+            if (targetNum % cnt == 0) {
                 answer++;
             }
         }
